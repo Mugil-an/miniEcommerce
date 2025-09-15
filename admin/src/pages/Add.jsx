@@ -45,7 +45,6 @@ const Add = ({token}) => {
         setImage3(false);
         setImage4(false);
         setname('');
-        setdescription('');
         setPrice('');
         setCategory("Men");
         setsubCategory("TopWear");

@@ -15,7 +15,7 @@ const Product = () => {
     const item = products.find(p => p._id === productId);
     if (item) {
       setProductData(item); 
-      setProductImg(item.image[0]);
+      setProductImg(item.images[0].url);
   }
 }
 
@@ -29,8 +29,8 @@ const Product = () => {
         <div className='flex sm:gap-12 flex-col sm:flex-row'>
            <div className='flex-1 flex flex-col-reverse gap-3 sm:flex-row'>
                 <div className='flex sm:flex-col overflow-x-auto justify-between sm:justify-normal sm:w-[18.7%] w-full'>
-                  {productData.image.map((img,index) =>(
-                    <img onClick={() =>{setProductImg(img)}}className='w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer' key={index} src={img}/>
+                  {productData.images.map((img,index) =>(
+                    <img onClick={() =>{setProductImg(img.url)}}className='w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer' key={index} src={img.url}/>
                   ))}
                 </div>
                 <div className='w-full sm:w-[80%]'>

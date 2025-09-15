@@ -43,7 +43,7 @@ const Collection = () => {
       default:
         applyFilter();
         break;
-     }
+    }
   }
 
   useEffect(()=>{
@@ -52,7 +52,7 @@ const Collection = () => {
 
   useEffect(()=>{
     applyFilter();
-  },[category,subCategory,search])
+  },[category,subCategory,search,products])
 
 
 
@@ -136,7 +136,7 @@ const Collection = () => {
         </div>
         <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
            {filterProducts.map((item,index)=>(
-            <ProductsItems key={index} name={item.name} id={item._id} price={item.price} image={item.image} />
+            <ProductsItems key={index} name={item.name} id={item._id} price={item.price} images={item.images} />
            ))}
         </div>
       </div>
